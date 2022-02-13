@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js"></script>
+
+    <!-- Box Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Slider Bar</title>
+</head>
+
+<body>
+    <div class="slider-bar">
+        <div class="logo-content">
+            <i class='bx bxl-trip-advisor bx-tada' ></i>
+            <h3 class="txt-content">CodingLab</h3>
+        </div>
+        <div class="menu">
+            <i class='bx bx-menu ' ></i>
+        </div>
+        <div class="list-container">
+            <ul class="list-child">
+                <li class="search">
+                    <i class='bx bx-search-alt-2 ' ></i>
+                    <input type="text" placeholder="Search">
+                    <span class='tooltip'>Search</span>
+                </li>
+                <li class="list-menu">
+                    <a href="#">
+                        <i class='bx bxs-dashboard '></i>
+                        <span class='link-name'>Dashboard</span>
+                    </a>
+                    <span class='tooltip'>Dashboard</span>
+                </li>
+                <li  class="list-menu">
+                    <a href="#">
+                    <i class='bx bx-user-circle' ></i>
+                    <span class='link-name'>User</span>
+                        </a>
+                        <span class='tooltip'>User</span>
+                </li>
+                <li class="list-menu">
+                    <a href="#">
+                        <i class='bx bxs-message-dots' ></i>
+                        <span class='link-name'>Message</span>
+                    </a>
+                    <span class='tooltip'>Message</span>
+                </li>
+                <li class="list-menu">
+                    <a href="#">
+                    <i class='bx bxs-analyse' ></i>
+                    <span class='link-name'>Analytics</span>
+                </a>
+                <span class='tooltip'>Analytics</span>
+                </li>
+                <li class="list-menu">
+                    <a href="#">
+                    <i class='bx bxs-file-plus' ></i>
+                    <span class='link-name'>File Manager</span></a>
+                    <span class='tooltip'>File Manager</span>
+                </li>
+                <li class="list-menu">
+                    <a href="#">
+                    <i class='bx bxs-shopping-bag' ></i>
+                    <span class='link-name'>Order</span></a>
+                    <span class='tooltip'>Order</span>
+                </li>
+                <li class="list-menu">
+                    <a href="#">
+                    <i class='bx bxs-save' ></i>
+                    <span class='link-name'>Saved</span></a>
+                    <span class='tooltip'>Saved</span>
+                </li>
+                <li class="list-menu">
+                    <a href="#">
+                    <i class='bx bxs-cog' ></i>
+                    <span class='link-name'>Setting</span></a>
+                    <span class='tooltip'>Setting</span>
+                </li>
+            </ul>
+            <div class="list-child profile-content">
+                <div class="content">
+                    <img src="https://images.pexels.com/photos/4029925/pexels-photo-4029925.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                    <div class="infor">
+                        <div class="infor-child">ThuongNguyen</div>
+                        <div class="infor-child">Adminstrator</div>
+                    </div>
+                </div>
+                <i class='bx bxs-log-out' ></i>
+            </div>
+        </div>
+    </div>
+    <div class="home-content">
+        <div class="home-content-text">Home Content</div>
+    </div>
+</body>
+<script type='text/javascript' lang='javascript'>
+    $(document).ready(function(){
+        $('.list-menu').hover(function(){
+            $(this).css('background','#363746');
+            $(this).children('a').css('color','#4065CE');
+        });
+        $('li').mouseleave(function(){
+            $(this).css('background','#1E1F35');
+            $(this).children('a').css('color','#fff');
+        });
+    $('.bx-menu').click(function(){
+        $('.slider-bar').toggleClass("active");
+        $('.home-content').toggleClass("active");
+    });
+    $('.bx-search-alt-2').click(function(){
+        $('.slider-bar').toggleClass("active");
+        $('.home-content').toggleClass("active");
+    });
+    });
+
+</script>
+</html>

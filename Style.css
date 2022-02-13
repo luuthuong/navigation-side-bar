@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 19px;
+    background-color: #9B9BA5;
+}
+
+.slider-bar {
+    position: fixed;
+    background-color: #1E1F35;
+    color: #fff;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 100vh;
+    max-width: 250px;
+    transition: all 0.3s ease-in-out;
+}
+.slider-bar.active{
+    width: 250px;
+}
+
+.logo-content {
+    display: flex;
+    justify-content: flex-start;
+    line-height: 50px;
+}
+.slider-bar.active .logo-content i{
+    opacity: 1;
+}
+
+.slider-bar .logo-content i {
+    opacity: 0;
+    font-size: 50px;
+}
+
+.slider-bar .logo-content h3 {
+    font-weight: 600;
+    text-align: center;
+    user-select: none;
+    padding-left: 10px;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.slider-bar.active .logo-content h3{
+opacity: 1;
+}
+.slider-bar .menu {
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    cursor: pointer;
+}
+.slider-bar.active .menu{
+    left: 85%;
+} 
+
+.slider-bar .menu i {
+    font-size: 40px;
+}
+.slider-bar.active  .menu {
+right: 5px;
+}
+
+.list-container {
+width: 100%;
+height:100%;
+}
+
+.list-container ul {
+    list-style: none;
+}
+
+.slider-bar .list-container ul li {
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    height:50px;
+    line-height:50px;
+    position: relative;
+    user-select: none;
+    text-align: center;
+    transition:all .3s ease;
+}
+.slider-bar.active .list-container ul li {
+    /* padding: 10px 0 10px 20px; */
+    padding-left: 20px;
+    text-align: left;
+}
+
+
+.slider-bar .list-container ul li a {
+    color: #fff;
+    text-align: center;
+}
+.slider-bar .list-container ul li a span{
+    padding-left: 10px;
+    display: none;
+}
+.slider-bar.active .list-container ul li a span{
+    padding-left: 10px;
+    display: inline;
+}
+.slider-bar .list-container ul li input {
+    line-height: 35px;
+    background-color: #9B9BA5;
+    position: absolute;
+    width: 90%;
+    height: 45px;
+    left: 5%;
+    top: 0;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding-left: 30px;
+    font-size: 20px;
+    color: #fff;
+}
+.slider-bar .list-container ul li input::placeholder{
+    opacity: 0;
+}
+.slider-bar.active .list-container ul li input::placeholder{
+    opacity: 1;
+}
+.slider-bar .list-container ul li.search i {
+    position: absolute;
+    top: 30%;
+    z-index: 100;
+    left: 35%;
+    font-size: 20px;
+    height: 100%;
+    line-height:100%;
+}
+.slider-bar.active .list-container ul li.search i{
+    left: 20px;
+}
+.slider-bar .list-container ul li .tooltip {
+    position: absolute;
+    width: 122px;
+    height: 35px;
+    box-shadow: 0 5 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(50%);
+    border-radius: 10px;
+    background-color: #fff;
+    color: #1E232B;
+    left: 45px;
+    top: -10%;
+    z-index: 100;
+    line-height: 35px;
+    text-align: center;
+    font-size: 16px;
+    transition: top 0.2s linear;
+    opacity: 0;
+    pointer-events: none;
+}
+.slider-bar .list-container ul li:hover .tooltip {
+    top: 40%;
+    opacity: 1;
+}
+
+.slider-bar.active .list-container ul li .tooltip{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.slider-bar .profile-content{
+position: absolute;
+width:100%;
+height:50px;
+bottom: 0;
+/* display: flex;
+justify-content: space-between; */
+background-color: #1E232B;
+padding:0px;
+}
+.slider-bar.active .profile-content{
+    padding:2px;
+}
+.slider-bar .profile-content .content {
+    display: flex;
+}
+.slider-bar .profile-content .content img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(9, 60, 102, 0.9);
+}
+.slider-bar .profile-content .infor {
+    font-size: 15px;
+    margin-left: 5px;
+    user-select: none;
+    color: gainsboro;
+    display: none;
+}
+.slider-bar.active .profile-content .infor{
+    display: inline;
+}
+.slider-bar .profile-content i{
+    position: absolute;
+    top: 30%;
+    right: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    display:none;
+}
+.slider-bar.active .profile-content i{
+    display: inline;
+    height:45px;
+}
+.home-content{
+    position: absolute;
+    left:50px;
+    width:calc(100%-250px);
+    color: #1E1F35;
+    font-weight: 700;
+    margin-top:10px;
+}
+.home-content.active{
+    left: 260px;
+}
